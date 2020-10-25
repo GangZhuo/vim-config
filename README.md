@@ -52,10 +52,10 @@ Run ":PlugInstall" in your vim.
 * ALT + )	增加宽度
 * ALT + (	减小宽度
 
-* <leader>tt 新建一个终端
+* leader tt 新建一个终端
 * Backspace	 关闭搜索高亮颜色
 
-* <space><space> 保存当前 buffer
+* space space 保存当前 buffer
 
 * Y			复制到行尾
 * vv		选择整行
@@ -65,16 +65,16 @@ Run ":PlugInstall" in your vim.
 * ALT + L	移动 buffer
 * ALT + H	移动 buffer
 
-* <leader>tn	新建一个 Tab
-* <leader>tc	关闭 Tab
+* leader tn	新建一个 Tab
+* leader tc	关闭 Tab
 
 ### 插入模式下
 
-* jk		等同于按 <ESC>
+* jk		等同于按 ESC
 * ALT + o	在下方新建空白行
 * ALT + O	在上方新建空白行
-* ALT + h	等同于按 <HOME>
-* ALT + l	等同于按 <END>
+* ALT + h	等同于按 HOME
+* ALT + l	等同于按 END
 * CTRL + h	左移一字符
 * CTRL + j	下移一行
 * CTRL + k	上移一行
