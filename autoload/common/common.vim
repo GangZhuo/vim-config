@@ -29,4 +29,4 @@ function! common#common#init() abort
     " 脚本目录
     let g:scripts_root_path = g:vim_root_path . "/scripts"
 
-  endfunction
+endfunction

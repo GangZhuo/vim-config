@@ -7,6 +7,7 @@ let g:coc_config_home = g:other_config_root_path
 " coc插件列表，可根据需要进行删减
 let g:coc_global_extensions = [
     \ 'coc-lists',
+    \ 'coc-explorer',
     \ 'coc-css',
     \ 'coc-json',
     \ 'coc-clangd',
@@ -28,7 +29,6 @@ let g:coc_global_extensions = [
     "\ 'coc-word',
     "\ 'coc-python',
     "\ 'coc-tabnine',
-    "\ 'coc-explorer',
     "\ 'coc-prettier',
     "\ 'coc-bookmark',
     "\ 'coc-rainbow-fart',
@@ -154,12 +154,6 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" Mappings for CoCList
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
@@ -177,3 +171,138 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+" Mappings for CoCList {{{
+
+    " session 保存目录
+    call coc#config('session.directory', g:session_dir)
+    " 退出时自动保存session
+    call coc#config('session.saveOnVimLeave', v:true)
+
+    call coc#config('list.maxHeight', 10)
+    call coc#config('list.maxPreviewHeight', 8)
+    call coc#config('list.autoResize', v:false)
+    call coc#config('list.source.grep.command', 'rg')
+    call coc#config('list.source.grep.defaultArgs', [
+        \ '--column',
+        \ '--line-number',
+        \ '--no-heading',
+        \ '--color=always',
+        \ '--smart-case'
+      \ ])
+    call coc#config('list.source.lines.defaultArgs', ['-e'])
+    call coc#config('list.source.words.defaultArgs', ['-e'])
+    call coc#config('list.source.files.command', 'rg')
+    call coc#config('list.source.files.args', ['--files'])
+    call coc#config('list.source.files.excludePatterns', ['.git'])
+
+    " 有 fzf.vim 插件则不设置
+    if !common#functions#HasPlug('fzf.vim')
+        nnoremap <silent> <M-f> :<C-u>CocList --no-sort files<cr>
+    endif
+
+
+" }}}
+
+" coc-explorer {{{
+    let g:coc_explorer_global_presets = {
+        \   '.vim': {
+        \      'root-uri': '~/.vim',
+        \   },
+        \   'floating': {
+        \      'position': 'floating',
+        \      'floating-position': 'center',
+        \      'floating-width': 100,
+        \      'open-action-strategy': 'sourceWindow',
+        \      'file-child-template': '[git | 2] [selection | clip | 1]
+                    \ [indent] [icon | 1] [diagnosticError & 1]
+                    \ [filename omitCenter 1][modified][readonly]
+                    \ [linkIcon & 1][link growRight 1] [timeCreated | 8] [size]'
+        \   },
+        \   'floatingTop': {
+        \     'position': 'floating',
+        \     'floating-position': 'center-top',
+        \     'open-action-strategy': 'sourceWindow',
+        \   },
+        \   'floatingLeftside': {
+        \      'position': 'floating',
+        \      'floating-position': 'left-center',
+        \      'floating-width': 100,
+        \      'open-action-strategy': 'sourceWindow',
+        \   },
+        \   'floatingRightside': {
+        \      'position': 'floating',
+        \      'floating-position': 'right-center',
+        \      'floating-width': 100,
+        \      'open-action-strategy': 'sourceWindow',
+        \   },
+        \   'simplify': {
+        \     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+        \   }
+    \ }
+
+    " Use preset argument to open it
+    " nmap <space>rd :CocCommand explorer --preset .vim<CR>
+    nmap <F2> :CocCommand explorer<CR>
+    nmap <leader>f :CocCommand explorer --preset floating<CR>
+
+    augroup vime_coc_explorer_group
+        autocmd!
+        " autocmd WinEnter * if &filetype == 'coc-explorer' && winnr('$') == 1 | q | endif
+        autocmd TabLeave * if &filetype == 'coc-explorer' | wincmd w | endif
+    augroup END
+
+    " config
+    call coc#config("explorer.icon.enableNerdfont", v:true)
+    call coc#config("explorer.bookmark.child.template", "[selection | 1] [filename] [position] - [annotation]")
+    call coc#config("explorer.file.column.icon.modified", "•")
+    call coc#config("explorer.file.column.icon.deleted", "✖")
+    call coc#config("explorer.file.column.icon.untracked", "ᵁ")
+    call coc#config("explorer.file.column.icon.renamed", "R")
+    call coc#config("explorer.file.column.icon.unmerged", "≠")
+    call coc#config("explorer.file.column.icon.ignored", "ⁱ")
+    call coc#config("explorer.keyMappings", {
+      \ 'k': 'nodePrev',
+      \ 'j': 'nodeNext',
+      \ 'h': 'collapse',
+      \ 'l': ['expandable?', 'expand', 'open'],
+      \ 'L': 'expand:recursive',
+      \ 'H': 'collapse:recursive',
+      \ 'K': 'expandablePrev',
+      \ 'J': 'expandableNext',
+      \ '<cr>': ['expandable?', 'cd', 'open'],
+      \ '<bs>': 'gotoParent',
+      \ 'r': 'refresh',
+      \ 'v': ['toggleSelection', 'normal:j'],
+      \ 'V': ['toggleSelection', 'normal:k'],
+      \ '*': 'toggleSelection',
+      \ 'w': 'open:split',
+      \ 'W': 'open:vsplit',
+      \ 't': 'open:tab',
+      \ 'dd': 'cutFile',
+      \ 'Y': 'copyFile',
+      \ 'D': 'delete',
+      \ 'P': 'pasteFile',
+      \ 'R': 'rename',
+      \ 'N': 'addFile',
+      \ 'yp': 'copyFilepath',
+      \ 'yn': 'copyFilename',
+      \ 'gp': 'preview:labeling',
+      \ 'x': 'systemExecute',
+      \ 'f': 'search',
+      \ 'F': 'searchRecursive',
+      \ '<tab>': 'actionMenu',
+      \ '?': 'help',
+      \ 'q': 'quit',
+      \ '<esc>': 'esc',
+      \ 'gf': 'gotoSource:file',
+      \ 'gb': 'gotoSource:buffer',
+      \ '[[': 'sourcePrev',
+      \ ']]': 'sourceNext',
+      \ '[d': 'diagnosticPrev',
+      \ ']d': 'diagnosticNext',
+      \ '[c': 'gitPrev',
+      \ ']c': 'gitNext',
+      \ '<<': 'gitStage',
+      \ '>>': 'gitUnstage'
+    \ })
+" }}}
