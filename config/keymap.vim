@@ -13,10 +13,10 @@ nnoremap <M-_> :resize -3<CR>
 nnoremap <M-(> :vertical resize -3<CR>
 nnoremap <M-)> :vertical resize +3<CR>
 " 分割窗口
-nnoremap <c-w>k :abo split <cr>
-nnoremap <c-w>h :abo vsplit <cr>
-nnoremap <c-w>j :rightbelow split <cr>
-nnoremap <c-w>l :rightbelow vsplit <cr>
+"nnoremap <c-w>k :abo split <cr>
+"nnoremap <c-w>h :abo vsplit <cr>
+"nnoremap <c-w>j :rightbelow split <cr>
+"nnoremap <c-w>l :rightbelow vsplit <cr>
 
 " 关闭搜索颜色
 nnoremap <BackSpace> :nohl<cr>
