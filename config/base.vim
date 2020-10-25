@@ -54,6 +54,12 @@ set timeoutlen=500
 set ttimeoutlen=10
 set mouse=n                                         " 允许使用鼠标, normal生效，a则是全模式生效
 
+" 高亮当前行
+set cursorline
+
+" 高亮当前列
+"set cursorcolumn
+
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("patch-8.1.1564")
