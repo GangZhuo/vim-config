@@ -1,3 +1,7 @@
+function! common#common#echo() abort
+    echom 'autoload#common#echo()'
+endfunction
+
 function! common#common#init() abort
 
     " vimrc 所在根目录
