@@ -1,0 +1,6 @@
+host github.com
+  user git
+  hostname ssh.github.com
+  port 443
+  proxycommand socat - PROXY:127.0.0.1:%h:%p,proxyport=1081
+
