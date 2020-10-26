@@ -70,6 +70,9 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git z zsh-autosuggestions extract web-search zsh-syntax-highlighting colored-man-pages colorize cp)
 
+# git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
