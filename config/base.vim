@@ -55,7 +55,7 @@ set ttimeoutlen=10
 set mouse=n                                         " 允许使用鼠标, normal生效，a则是全模式生效
 
 " 高亮当前行
-set cursorline
+"set cursorline
 
 " 高亮当前列
 "set cursorcolumn
