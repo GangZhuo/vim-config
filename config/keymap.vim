@@ -21,8 +21,7 @@ nnoremap <M-)> :vertical resize +3<CR>
 " 关闭搜索颜色
 nnoremap <BackSpace> :nohl<cr>
 
-nnoremap <leader>lb 0     " 定义快捷键到行首
-nnoremap <leader>le $     " 定义快捷键到行尾
+nnoremap <leader>4 $      " 定义快捷键到行尾
 vnoremap <leader>y "+y    " 设置快捷键将选中
                           " 文本块复制至系统剪贴板
 nmap <leader>p "+p        " 设置快捷键将系统剪贴板

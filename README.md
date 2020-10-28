@@ -55,8 +55,7 @@ Run ":PlugInstall" in your vim.
 * ALT + )        增加宽度
 * ALT + (        减小宽度
 
-* <leader>lb     移动到行首
-* <leader>le     移动到行尾
+* <leader>4      移动到行尾
 
 * <leader>y      复制选中文本块至系统剪贴板
 * <leader>p      从系统剪贴板内容粘贴至 vim
