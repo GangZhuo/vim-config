@@ -90,7 +90,8 @@ Run ":PlugInstall" in your vim.
 * mx               Toggle mark 'x' and display it in the leftmost column
 * dmx              Remove mark 'x' where x is a-zA-Z
 * m,               Place the next available mark
-* m.               If no mark on line, place the next available mark. Otherwise, remove (first) existing mark.
+* m.               If no mark on line, place the next available mark.
+                   Otherwise, remove (first) existing mark.
 * m-               Delete all marks from the current line
 * m<Space>         Delete all marks from the current buffer
 * ]`               Jump to next mark
