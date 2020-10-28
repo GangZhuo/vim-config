@@ -121,6 +121,22 @@ Run ":PlugInstall" in your vim.
 * ''               跳回来的地方(最近两个位置跳转)
 ```
 
+### 文件管理器
+
+```
+* <F2>             显示文件窗口
+* <leader>f        浮窗显示文件窗口
+* k                上一个节点
+* j                下一个节点
+* h                收起
+* l                展开/打开文件
+* H                递归收起
+* L                递归展开
+* <Enter>           cd 目录/open 文件
+* <Backspace>       跳到父节点
+* r                 刷新
+```
+
 ### coc.nvim 插件
 
 ```
@@ -138,6 +154,5 @@ Run ":PlugInstall" in your vim.
 * <space>rn        重命名
 * K                显示函数文档
 * <space>k         显示参数文档
-* <F2>             显示文件窗口
 * <leader>f        浮窗显示文件窗口
 ```
