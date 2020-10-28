@@ -21,8 +21,14 @@ nnoremap <M-)> :vertical resize +3<CR>
 " 关闭搜索颜色
 nnoremap <BackSpace> :nohl<cr>
 
-" jk表示esc
-inoremap jk <esc>
+nnoremap <Leader>lb 0     " 定义快捷键到行首
+nnoremap <Leader>le $     " 定义快捷键到行尾
+vnoremap <Leader>y "+y    " 设置快捷键将选中
+                          " 文本块复制至系统剪贴板
+nmap <Leader>p "+p        " 设置快捷键将系统剪贴板
+                          " 内容粘贴至 vim
+nmap <Leader>pa %         " 定义快捷键在结对符
+                          " 之间跳转，助记 pair
 
 " 新建终端
 nnoremap <leader>tt :terminal<cr>
