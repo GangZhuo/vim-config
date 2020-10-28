@@ -39,6 +39,8 @@ Run ":PlugInstall" in your vim.
 
 ## 快捷键
 
+前导键 &lt;leader&gt; 为 ";"。
+
 ### 普通模式下
 
 ```
@@ -53,8 +55,17 @@ Run ":PlugInstall" in your vim.
 * ALT + )        增加宽度
 * ALT + (        减小宽度
 
+* <leader>lb     移动到行首
+* <leader>le     移动到行尾
+
+* <leader>y      复制选中文本块至系统剪贴板
+* <leader>p      从系统剪贴板内容粘贴至 vim
+
+* <leader>5      在结对符之间跳转
+
 * <leader>tt     新建一个终端
-* Backspace      关闭搜索高亮颜色
+
+* <Backspace>    关闭搜索高亮颜色
 
 * <space><space> 保存当前 buffer
 
