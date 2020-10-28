@@ -55,12 +55,8 @@ Run ":PlugInstall" in your vim.
 * ALT + )        增加宽度
 * ALT + (        减小宽度
 
-* ge             移动到行尾
-
 * <leader>y      复制选中文本块至系统剪贴板
 * <leader>p      从系统剪贴板内容粘贴至 vim
-
-* <leader>5      在结对符之间跳转
 
 * <leader>tt     新建一个终端
 
@@ -69,7 +65,6 @@ Run ":PlugInstall" in your vim.
 * <space><space> 保存当前 buffer
 
 * Y              复制到行尾
-* vv             复制整行
 
 * ALT + l        切换 tab/buffer
 * ALT + h        切换 tab/buffer
@@ -83,7 +78,6 @@ Run ":PlugInstall" in your vim.
 ### 插入模式下
 
 ```
-* jk              等同于按 ESC
 * ALT + o         在下方新建空白行
 * ALT + O         在上方新建空白行
 * ALT + h         等同于按 HOME

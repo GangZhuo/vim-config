@@ -21,13 +21,10 @@ nnoremap <M-)> :vertical resize +3<CR>
 " 关闭搜索颜色
 nnoremap <BackSpace> :nohl<cr>
 
-nnoremap ge $             " 定义快捷键到行尾
 vnoremap <leader>y "+y    " 设置快捷键将选中
                           " 文本块复制至系统剪贴板
 nmap <leader>p "+p        " 设置快捷键将系统剪贴板
                           " 内容粘贴至 vim
-nmap <leader>5 %          " 定义快捷键在结对符
-                          " 之间跳转
 
 " 新建终端
 nnoremap <leader>tt :terminal<cr>
@@ -57,7 +54,6 @@ vnoremap k gk
 
 " 复制到末尾
 nnoremap Y y$
-nnoremap vv ^vg_y
 
 if !common#functions#HasPlug('vim-airline') && !common#functions#HasPlug('vim-crystalline')
     nnoremap  <M-l> :call common#functions#MoveTabOrBuf(1)<cr>
