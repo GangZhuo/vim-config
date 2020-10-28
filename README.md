@@ -135,6 +135,10 @@ Run ":PlugInstall" in your vim.
 * <Enter>           cd 目录/open 文件
 * <Backspace>       跳到父节点
 * r                 刷新
+* f                 搜索
+* F                 递归搜索
+* <tab>             弹出菜单
+* q                 退出
 ```
 
 ### coc.nvim 插件
