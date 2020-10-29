@@ -22,6 +22,7 @@ Plug 'luochen1990/rainbow'
 
 " 检索
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': {-> fzf#install()} }
 
 " 注释插件
 Plug 'scrooloose/nerdcommenter'

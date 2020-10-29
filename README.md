@@ -88,6 +88,39 @@ Run ":PlugInstall" in your vim.
 * CTRL + l        右移一字符
 ```
 
+### 折叠
+
+```
+* za              打开或关闭当前折叠
+* zM              关闭所有折叠
+* zR              打开所有折叠
+* zc              折叠
+* zC              在所在范围内所有嵌套的折叠点进行折叠
+* zo              展开折叠
+* zO              对所在范围内所有嵌套的折叠点展开
+* [z              到当前打开的折叠的开始处
+* ]z              到当前打开的折叠的末尾处
+* zj              向下移动到下一个折叠的开始处(关闭的折叠也被计入)
+* zk              向上移动到前一个折叠的结束处(关闭的折叠也被计入)
+```
+
+### 注释
+
+```
+* <leader>cc      注释
+* <leader>cu      取消注释选中的内容
+* <leader>cs      用比较好看的方式注释当前行或选中内容
+* <leader>ci      注释/取消注释
+* <leader>cm      用最简洁的方式注释当前行或选中内容
+* <leader>cl      按行的方式注释选中的内容
+* <leader>cb      注释选中的内容
+* <leader>ca      切换到另一种注释符号
+* <leader>cA      在当前行最后增加注释符号并进入插入模式
+* <leader>c$      从当前光标处注释到行尾
+* <leader>c<space>
+* <leader>cn
+```
+
 ### 书签
 
 ```
@@ -159,4 +192,26 @@ Run ":PlugInstall" in your vim.
 * K                显示函数文档
 * <space>k         显示参数文档
 * <leader>f        浮窗显示文件窗口
+```
+
+### 搜索
+
+```
+* ALT + f          搜索工程目录下的文件
+* ALT + F          搜索 HOME 下的所有文件
+* ALT + b          显示当前打开的所有 buffer
+* ALT + r          最近打开的文件
+* ALT + w          显示打开的窗口
+* ALT + m          显示所有标记 (mark)
+* ALT + M          显示所有映射
+* ALT + s          使用 RipGrep 搜索当前工程下的文件内容
+                   (Visual 模式下搜索选中内容)
+* ?                模糊搜索所有打开的 buffer 的内容
+* ALT + y          显示复制内容
+* ALT + J          显示跳转
+* <F8>             quickfix
+* <F9>             locationList
+* CTRL + j         下移选项
+* CTRL + k         上移选项
+
 ```
