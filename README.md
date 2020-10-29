@@ -178,6 +178,7 @@ Run ":PlugInstall" in your vim.
 
 ```
 * Tab              触发补全、选择下一个补全
+* Shift + Tab      如果存在下拉框, 则选择下拉框的上一个
 * CTRL + <space>   触发补全
 * Enter            选择第一个补全
 * ALT + j          移动到下一个问题点
@@ -192,6 +193,12 @@ Run ":PlugInstall" in your vim.
 * K                显示函数文档
 * <space>k         显示参数文档
 * <leader>f        浮窗显示文件窗口
+
+* <space>l         打开 coclist
+* <space>a         打开 coclist dialogistic
+* <space>c         打开 coclist command
+* <space>o         打开 coclist outline
+* <space>O         打开 coclist symbols
 ```
 
 ### 搜索
