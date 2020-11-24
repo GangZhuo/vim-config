@@ -72,6 +72,14 @@ Run ":PlugInstall" in your vim.
 * zk              向上移动到前一个折叠的结束处(关闭的折叠也被计入)
 ```
 
+### EasyMotion
+
+```
+* f               示意一个字符
+* F               示意单词
+* gl              示意行
+```
+
 ### 注释
 
 ```
