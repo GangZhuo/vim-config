@@ -2,10 +2,10 @@
 let mapleader=";"
 
 " 窗口相关快捷键
-"noremap <c-h> <C-w>h
-"noremap <c-j> <C-w>j
-"noremap <c-k> <C-w>k
-"noremap <c-l> <C-w>l
+noremap <c-h> <C-w>h
+noremap <c-j> <C-w>j
+noremap <c-k> <C-w>k
+noremap <c-l> <C-w>l
 " 更改窗口垂直大小
 nnoremap <M--> :resize +3<CR>
 nnoremap <M-_> :resize -3<CR>

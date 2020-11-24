@@ -44,6 +44,11 @@ Run ":PlugInstall" in your vim.
 ### 普通模式下
 
 ```
+* CTRL + h       移动焦点到左侧窗口
+* CTRL + j       移动焦点到上方窗口
+* CTRL + k       移动焦点到下方窗口
+* CTRL + l       移动焦点到右侧窗口
+
 * ALT + -        增加高度
 * ALT + _        减小高度
 
