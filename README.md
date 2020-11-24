@@ -41,7 +41,7 @@ Run ":PlugInstall" in your vim.
 
 前导键 &lt;leader&gt; 为 ";"。
 
-### 普通模式下
+### 基础快捷键
 
 ```
 * CTRL + h       移动焦点到左侧窗口
