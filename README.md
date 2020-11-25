@@ -83,6 +83,27 @@ Run ":PlugInstall" in your vim.
 * <F9>             locationList
 
 ```
+
+### coc-explorer 文件管理器
+
+```
+* <F2>             显示文件窗口
+* <leader>f        浮窗显示文件窗口
+* k                上一个节点
+* j                下一个节点
+* h                收起
+* l                展开/打开文件
+* H                递归收起
+* L                递归展开
+* <Enter>           cd 目录/open 文件
+* <Backspace>       跳到父节点
+* r                 刷新
+* f                 搜索
+* F                 递归搜索
+* <tab>             弹出菜单
+* q                 退出
+```
+
 ### 折叠
 
 ```
@@ -107,24 +128,7 @@ Run ":PlugInstall" in your vim.
 * gl              示意行
 ```
 
-### 注释
-
-```
-* <leader>cc      注释
-* <leader>cu      取消注释选中的内容
-* <leader>cs      用比较好看的方式注释当前行或选中内容
-* <leader>ci      注释/取消注释
-* <leader>cm      用最简洁的方式注释当前行或选中内容
-* <leader>cl      按行的方式注释选中的内容
-* <leader>cb      注释选中的内容
-* <leader>ca      切换到另一种注释符号
-* <leader>cA      在当前行最后增加注释符号并进入插入模式
-* <leader>c$      从当前光标处注释到行尾
-* <leader>c<space>
-* <leader>cn
-```
-
-### 书签
+### 书签 (mark)
 
 ```
 * mx               Toggle mark 'x' and display it in the leftmost column
@@ -155,26 +159,6 @@ Run ":PlugInstall" in your vim.
 * '[a-zA-Z]        跳转到标签位置
 * '.               最后一次变更的地方
 * ''               跳回来的地方(最近两个位置跳转)
-```
-
-### 文件管理器
-
-```
-* <F2>             显示文件窗口
-* <leader>f        浮窗显示文件窗口
-* k                上一个节点
-* j                下一个节点
-* h                收起
-* l                展开/打开文件
-* H                递归收起
-* L                递归展开
-* <Enter>           cd 目录/open 文件
-* <Backspace>       跳到父节点
-* r                 刷新
-* f                 搜索
-* F                 递归搜索
-* <tab>             弹出菜单
-* q                 退出
 ```
 
 ### coc.nvim 插件
