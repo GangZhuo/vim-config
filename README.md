@@ -61,6 +61,28 @@ Run ":PlugInstall" in your vim.
 * <Backspace>    关闭搜索高亮颜色
 ```
 
+### fzf 搜索
+
+```
+* CTRL + j         下移搜索窗口中的选项
+* CTRL + k         上移搜索窗口中的选项
+
+* ALT + f          搜索工程目录下的文件
+* ALT + F          搜索 HOME 下的所有文件
+* ALT + b          显示当前打开的所有 buffer
+* ALT + r          最近打开的文件
+* ALT + w          显示打开的窗口
+* ALT + m          显示 vim 中的所有标记 (mark)
+* ALT + M          显示 vim 中的所有映射 (快捷键)
+* ALT + s          使用 RipGrep 搜索当前工程下的文件内容
+                   (Visual 模式下则搜索 vim 选中内容)
+* ?                模糊搜索所有打开的 buffer 的内容
+* ALT + y          显示复制内容
+* ALT + J          显示跳转
+* <F8>             quickfix
+* <F9>             locationList
+
+```
 ### 折叠
 
 ```
@@ -182,24 +204,3 @@ Run ":PlugInstall" in your vim.
 * <space>O         打开 coclist symbols
 ```
 
-### 搜索
-
-```
-* ALT + f          搜索工程目录下的文件
-* ALT + F          搜索 HOME 下的所有文件
-* ALT + b          显示当前打开的所有 buffer
-* ALT + r          最近打开的文件
-* ALT + w          显示打开的窗口
-* ALT + m          显示所有标记 (mark)
-* ALT + M          显示所有映射
-* ALT + s          使用 RipGrep 搜索当前工程下的文件内容
-                   (Visual 模式下搜索选中内容)
-* ?                模糊搜索所有打开的 buffer 的内容
-* ALT + y          显示复制内容
-* ALT + J          显示跳转
-* <F8>             quickfix
-* <F9>             locationList
-* CTRL + j         下移选项
-* CTRL + k         上移选项
-
-```
