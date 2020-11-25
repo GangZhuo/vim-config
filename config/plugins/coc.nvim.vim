@@ -6,15 +6,17 @@ let g:coc_config_home = g:other_config_root_path
 
 " coc插件列表，可根据需要进行删减
 let g:coc_global_extensions = [
-    \ 'coc-lists',
     \ 'coc-explorer',
-    \ 'coc-css',
-    \ 'coc-json',
+    \ 'coc-lists',
     \ 'coc-clangd',
-    \ 'coc-xml',
     \ ]
 
+
+    "\ 'coc-xml',
+
     "\ 'coc-html',
+    "\ 'coc-css',
+    "\ 'coc-json',
     "\ 'coc-tsserver',
 
     "\ 'coc-vimlsp',
@@ -69,16 +71,18 @@ inoremap <silent><expr> <up>
     \ pumvisible() ? "\<C-p>" : "\<up>"
 
 " Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
+"if has('nvim')
+"  inoremap <silent><expr> <c-space> coc#refresh()
+"else
+"  inoremap <silent><expr> <c-@> coc#refresh()
+"endif
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <space> pumvisible() ? coc#_select_confirm()
+                              \: "\<space>"
 
 " diagnostic 跳转
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -95,12 +99,12 @@ nmap <silent> gi <plug>(coc-implementation)
 nmap <silent> gr <plug>(coc-references)
 
 " 重构refactor,需要lsp支持
-nmap <space>rf <Plug>(coc-refactor)
+"nmap <space>rf <Plug>(coc-refactor)
 " Formatting selected code.
-xmap <space>f  <Plug>(coc-format-selected)
-nmap <space>f  <Plug>(coc-format-selected)
+"xmap <space>f  <Plug>(coc-format-selected)
+"nmap <space>f  <Plug>(coc-format-selected)
 " 变量重命名
-nmap <space>rn <Plug>(coc-rename)
+nmap <leader>rn <Plug>(coc-rename)
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -117,59 +121,59 @@ endfunction
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 " 函数参数的文档
-nnoremap <silent> <space>k :call CocActionAsync('showSignatureHelp')<CR>
+nnoremap <silent> <leader>k :call CocActionAsync('showSignatureHelp')<CR>
 " 光标悬浮时，显示函数签名
 au CursorHoldI * sil call CocActionAsync('showSignatureHelp')
 
 " 文档块支持
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
+"xmap if <Plug>(coc-funcobj-i)
+"omap if <Plug>(coc-funcobj-i)
+"xmap af <Plug>(coc-funcobj-a)
+"omap af <Plug>(coc-funcobj-a)
+"xmap ic <Plug>(coc-classobj-i)
+"omap ic <Plug>(coc-classobj-i)
+"xmap ac <Plug>(coc-classobj-a)
+"omap ac <Plug>(coc-classobj-a)
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 " Note coc#float#scroll works on neovim >= 0.4.3 or vim >= 8.2.0750
-nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-inoremap <nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+"nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+"nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+"inoremap <nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+"inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 
 " Use CTRL-S for selections ranges.
 " Requires 'textDocument/selectionRange' support of language server.
-nmap <silent> <C-s> <Plug>(coc-range-select)
-xmap <silent> <C-s> <Plug>(coc-range-select)
+"nmap <silent> <C-s> <Plug>(coc-range-select)
+"xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
+"command! -nargs=0 Format :call CocAction('format')
 
 " Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+"command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+"command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <F4>  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+"nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <leader>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+"nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+"nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
+"nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+"nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+"nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Mappings for CoCList {{{
 
@@ -182,7 +186,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
     call coc#config('list.maxPreviewHeight', 8)
     call coc#config('list.autoResize', v:false)
     call coc#config('list.source.grep.command', 'rg')
-    call coc#config('list.source.grep.defaultArgs', [
+    call coc#config('list.source.grep.args', [
         \ '--column',
         \ '--line-number',
         \ '--no-heading',
@@ -242,8 +246,8 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
     " Use preset argument to open it
     " nmap <space>rd :CocCommand explorer --preset .vim<CR>
-    nmap <F2> :CocCommand explorer<CR>
-    nmap <leader>f :CocCommand explorer --preset floating<CR>
+    nmap <F2> :CocCommand explorer --sources=buffer+,file+<CR>
+    nmap <F3> :CocCommand explorer --sources=buffer+,file+ --preset floating<CR>
 
     augroup vime_coc_explorer_group
         autocmd!

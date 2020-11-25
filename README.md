@@ -88,7 +88,7 @@ Run ":PlugInstall" in your vim.
 
 ```
 * <F2>             显示文件窗口
-* <leader>f        浮窗显示文件窗口
+* <F3>             浮窗显示文件窗口
 * k                上一个节点
 * j                下一个节点
 * h                收起
@@ -122,7 +122,7 @@ Run ":PlugInstall" in your vim.
 * <leader>k        显示参数文档
 * <leader>f        浮窗显示文件窗口
 
-* <leader>a        打开 coclist dialogistic
+* <F4>             打开 coclist dialogistic
 * <leader>c        打开 coclist command
 ```
 
