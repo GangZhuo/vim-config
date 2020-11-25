@@ -25,7 +25,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': {-> fzf#install()} }
 
 " 注释插件
-Plug 'scrooloose/nerdcommenter'
+"Plug 'scrooloose/nerdcommenter'
 
 " 显示标注
 Plug 'kshenoy/vim-signature'
