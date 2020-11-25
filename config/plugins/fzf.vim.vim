@@ -15,7 +15,7 @@ let g:fzf_history_dir = g:fzf_dir . "/fzf-history"
 
 " 输入框在顶部
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
-let $FZF_DEFAULT_COMMAND = "rg --files --hidden"
+let $FZF_DEFAULT_COMMAND = "rg --files"
 
 " fzf外观
 " coc-fzf也使用这个变量
