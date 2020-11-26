@@ -60,7 +60,7 @@ Run ":PlugInstall" in your vim.
 
 * <Backspace>    关闭搜索高亮颜色
 
-* kj             esc in insert mode and command mode
+* jk             esc in insert mode and command mode
 ```
 
 ### fzf 搜索
