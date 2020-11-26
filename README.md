@@ -59,6 +59,8 @@ Run ":PlugInstall" in your vim.
 * <leader>p      从系统剪贴板内容粘贴至 vim
 
 * <Backspace>    关闭搜索高亮颜色
+
+* kj             esc in insert mode and command mode
 ```
 
 ### fzf 搜索

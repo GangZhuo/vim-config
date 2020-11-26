@@ -67,3 +67,9 @@ vnoremap p "6p
 "nnoremap <silent> <M-L> :tabmove +1<cr>
 "nnoremap <silent> <M-H> :tabmove -1<cr>
 
+" esc in insert mode
+inoremap kj <esc>
+
+" esc in command mode
+cnoremap kj <C-C>
+
