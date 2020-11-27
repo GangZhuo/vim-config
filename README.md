@@ -109,8 +109,8 @@ Run ":PlugInstall" in your vim.
 ### coc.nvim 插件
 
 ```
-* Tab              触发补全、选择下一个补全
-* Shift + Tab      如果存在下拉框, 则选择下拉框的上一个
+* Tab              如果存在补全下拉框、则选择下一个补全
+* Shift + Tab      如果存在补全下拉框, 则选择上一个补全
 * Enter            选择第一个补全
 * <space>          选择第一个补全
 * ALT + j          移动到下一个问题点
