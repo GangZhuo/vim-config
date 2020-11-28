@@ -20,6 +20,7 @@ set history=500                                             " 历史命令
 set splitbelow                                              " 在下方分割
 "set expandtab                                              " tab扩展为空格
 set noet                                                    " tab不扩展为空格
+set list                                                    " Show TAB
 set tabstop=4
 set softtabstop=4                                           " 连续数量的空格看作一个制表符
 set shiftwidth=4
@@ -72,6 +73,6 @@ endif
 
 " 定位到退出位置并移动到屏幕中央
 if has("autocmd")
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif | normal! zvzz
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif | normal! zvzz
 endif
 
