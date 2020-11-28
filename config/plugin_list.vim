@@ -30,6 +30,9 @@ Plug 'junegunn/fzf', { 'do': {-> fzf#install()} }
 " 显示标注
 Plug 'kshenoy/vim-signature'
 
+" Session
+Plug 'mhinz/vim-startify'
+
 " 自动补全
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
