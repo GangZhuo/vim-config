@@ -18,7 +18,8 @@ set ignorecase                                              " 忽略大小写
 set infercase                                               " Adjust case in insert completion mode
 set history=500                                             " 历史命令
 set splitbelow                                              " 在下方分割
-set expandtab                                               " tab扩展为空格
+"set expandtab                                              " tab扩展为空格
+set noet                                                    " tab不扩展为空格
 set tabstop=4
 set softtabstop=4                                           " 连续数量的空格看作一个制表符
 set shiftwidth=4
