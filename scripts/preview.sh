@@ -8,6 +8,8 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
+echo $1
+
 IFS=':' read -r -a INPUT <<< "$1"
 FILE=${INPUT[0]}
 CENTER=${INPUT[1]}
@@ -53,8 +55,15 @@ FIRST=$(($CENTER-$LINES/3))
 FIRST=$(($FIRST < 1 ? 1 : $FIRST))
 LAST=$((${FIRST}+${LINES}-1))
 
-if [ -z "$FZF_PREVIEW_COMMAND" ] && command -v bat > /dev/null; then
-  bat --style="${BAT_STYLE:-numbers}" --color=always --pager=never \
+# Sometimes bat is installed as batcat.
+if command -v batcat > /dev/null; then
+  BATNAME="batcat"
+elif command -v bat > /dev/null; then
+  BATNAME="bat"
+fi
+
+if [ -z "$FZF_PREVIEW_COMMAND" ] && [ "${BATNAME:+x}" ]; then
+  ${BATNAME} --style="${BAT_STYLE:-numbers}" --color=always --pager=never \
       --line-range=$FIRST:$LAST --highlight-line=$CENTER "$FILE"
   exit $?
 fi
@@ -63,9 +72,8 @@ DEFAULT_COMMAND="highlight -O ansi -l {} || coderay {} || rougify {} || cat {}"
 CMD=${FZF_PREVIEW_COMMAND:-$DEFAULT_COMMAND}
 CMD=${CMD//{\}/$(printf %q "$FILE")}
 
-eval "$CMD" 2> /dev/null | awk "NR >= $FIRST && NR <= $LAST { \
+eval "$CMD" 2> /dev/null | awk "{ \
     if (NR == $CENTER) \
         { gsub(/\x1b[[0-9;]*m/, \"&$REVERSE\"); printf(\"$REVERSE%s\n$RESET\", \$0); } \
     else printf(\"$RESET%s\n\", \$0); \
     }"
-
