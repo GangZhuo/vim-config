@@ -39,6 +39,9 @@ Plug 'mhinz/vim-startify'
 " ctags
 Plug 'ludovicchabant/vim-gutentags'
 
+" 函数列表
+Plug 'liuchengxu/vista.vim', {'on': ['Vista!!', 'Vista']}
+
 " 自动补全
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 

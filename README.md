@@ -68,6 +68,7 @@ Run ":PlugInstall" in your vim.
 ```
 * CTRL + j         下移搜索窗口中的选项
 * CTRL + k         上移搜索窗口中的选项
+* CTRL + g         退出当前窗口
 
 * ALT + f          搜索工程目录下的文件
 * ALT + F          搜索 HOME 下的所有文件
@@ -93,6 +94,7 @@ Run ":PlugInstall" in your vim.
 ```
 * <F2>             显示文件窗口
 * <F3>             浮窗显示文件窗口
+* <F4>             taglist
 * k                上一个节点
 * j                下一个节点
 * h                收起
@@ -126,7 +128,7 @@ Run ":PlugInstall" in your vim.
 * <leader>k        显示参数文档
 * <leader>f        浮窗显示文件窗口
 
-* <F4>             打开 coclist dialogistic
+* <F5>             打开 coclist dialogistic
 * <leader>c        打开 coclist command
 ```
 

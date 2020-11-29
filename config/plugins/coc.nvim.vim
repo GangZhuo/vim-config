@@ -161,7 +161,7 @@ au CursorHoldI * sil call CocActionAsync('showSignatureHelp')
 "command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " Show all diagnostics.
-nnoremap <silent><nowait> <F4>  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <F5>  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
 "nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
