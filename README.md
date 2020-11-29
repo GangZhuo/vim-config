@@ -78,6 +78,8 @@ Run ":PlugInstall" in your vim.
 * ALT + M          显示 vim 中的所有映射 (快捷键)
 * ALT + s          使用 RipGrep 搜索当前工程下的文件内容
                    (Visual 模式下则搜索 vim 选中内容)
+* ALT + t          当前 buffer 的 tags
+* ALT + T          All tags
 * ?                模糊搜索所有打开的 buffer 的内容
 * ALT + y          显示复制内容
 * ALT + J          显示跳转
