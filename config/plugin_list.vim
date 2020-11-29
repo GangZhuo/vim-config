@@ -20,6 +20,9 @@ Plug 'easymotion/vim-easymotion', {'on':
 " 彩虹括号
 Plug 'luochen1990/rainbow'
 
+"icons
+Plug 'ryanoasis/vim-devicons'
+
 " 检索
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': {-> fzf#install()} }
@@ -32,6 +35,9 @@ Plug 'kshenoy/vim-signature'
 
 " Session
 Plug 'mhinz/vim-startify'
+
+" ctags
+Plug 'ludovicchabant/vim-gutentags'
 
 " 自动补全
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
