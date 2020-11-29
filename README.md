@@ -26,11 +26,6 @@ source /etc/environment
 
 echo $JAVA_HOME
 
-# bat
-mkdir -p ~/.local/bin
-ln -s /usr/bin/batcat ~/.local/bin/bat
-export PATH="$HOME/.local/bin:$PATH" # Add to your .bashrc or .zshrc
-
 git clone https://github.com/GangZhuo/vim-config.git ~/.config/nvim
 
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
