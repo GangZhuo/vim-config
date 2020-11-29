@@ -182,7 +182,7 @@ nnoremap <silent><nowait> <leader>c  :<C-u>CocList commands<cr>
     " session 保存目录
     call coc#config('session.directory', g:session_dir)
     " 退出时自动保存session
-    call coc#config('session.saveOnVimLeave', v:true)
+    call coc#config('session.saveOnVimLeave', v:false)
 
     call coc#config('list.maxHeight', 10)
     call coc#config('list.maxPreviewHeight', 8)
