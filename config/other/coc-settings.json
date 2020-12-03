@@ -41,6 +41,17 @@
   "diagnostic.displayByAle": false,
   "diagnostic.maxWindowHeight": 10,
 
+  "bookmark.sign": {
+    "type": "string",
+    "default": "🔖",
+    "description": "Bookmark icon for sign column"
+  },
+  "bookmark.signHl": {
+    "type": "string",
+    "default": "Tag",
+    "description": "Highlight group for sign"
+  },
+
   "languageserver": {}
 }
 

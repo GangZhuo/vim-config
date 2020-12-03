@@ -400,9 +400,9 @@ nnoremap <M-F> :FWW $HOME<CR>
 nnoremap <M-b> :Buffers<CR>
 if common#functions#HasPlug('vista.vim')
     let g:vista_fzf_preview = ['up:50%:wrap']
-    noremap <M-t> :Vista finder<CR>
+    noremap <F3> :Vista finder<CR>
 else
-    nnoremap <M-t> :BTags<CR>
+    nnoremap <F3> :BTags<CR>
 endif
 nnoremap <M-T> :Tags<CR>
 nnoremap <M-s> :GrepWithWiki<CR>

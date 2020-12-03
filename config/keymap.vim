@@ -18,6 +18,9 @@ nnoremap <M-)> :vertical resize +3<CR>
 "nnoremap <c-w>j :rightbelow split <cr>
 "nnoremap <c-w>l :rightbelow vsplit <cr>
 
+nnoremap bp :bp <cr>
+nnoremap bn :bn <cr>
+
 vnoremap <leader>y "+y    " 设置快捷键将选中
                           " 文本块复制至系统剪贴板
 nmap <leader>p "+p        " 设置快捷键将系统剪贴板

@@ -9,4 +9,4 @@ let g:vista#renderer#icons = {
     \   "variable": "\uf71b",
     \  }
 
-nnoremap <F4> :Vista!!<CR>
+nnoremap <leader><F3> :Vista!!<CR>

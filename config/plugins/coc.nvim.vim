@@ -7,6 +7,7 @@ let g:coc_config_home = g:other_config_root_path
 " coc插件列表，可根据需要进行删减
 let g:coc_global_extensions = [
     \ 'coc-explorer',
+    \ 'coc-bookmark',
     \ 'coc-lists',
     \ 'coc-clangd',
     \ ]
@@ -32,7 +33,6 @@ let g:coc_global_extensions = [
     "\ 'coc-python',
     "\ 'coc-tabnine',
     "\ 'coc-prettier',
-    "\ 'coc-bookmark',
     "\ 'coc-rainbow-fart',
     "\ 'coc-git',
     "\ 'coc-ci',
@@ -161,7 +161,7 @@ au CursorHoldI * sil call CocActionAsync('showSignatureHelp')
 "command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " Show all diagnostics.
-nnoremap <silent><nowait> <F5>  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <F4>  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
 "nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
@@ -248,8 +248,14 @@ nnoremap <silent><nowait> <leader>c  :<C-u>CocList commands<cr>
 
     " Use preset argument to open it
     " nmap <space>rd :CocCommand explorer --preset .vim<CR>
-    nmap <F2> :CocCommand explorer --sources=buffer+,file+<CR>
-    nmap <F3> :CocCommand explorer --sources=buffer+,file+ --preset floating<CR>
+    nmap <leader><F2> :CocCommand explorer --sources=buffer+,file+,bookmark+<CR>
+    nmap <F2> :CocCommand explorer --sources=buffer+,file+,bookmark+ --preset floating<CR>
+
+    " Bookmark keymap
+    nmap bt <Plug>(coc-bookmark-toggle)
+    nmap ba <Plug>(coc-bookmark-annotate)
+    nmap bj <Plug>(coc-bookmark-next)
+    nmap bk <Plug>(coc-bookmark-prev)
 
     augroup vime_coc_explorer_group
         autocmd!
@@ -312,3 +318,4 @@ nnoremap <silent><nowait> <leader>c  :<C-u>CocList commands<cr>
       \ '>>': 'gitUnstage'
     \ })
 " }}}
+

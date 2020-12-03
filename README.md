@@ -56,6 +56,9 @@ Run ":PlugInstall" in your vim.
 * <leader>y      复制选中文本块至系统剪贴板
 * <leader>p      从系统剪贴板内容粘贴至 vim
 
+* bp     Previous buffer
+* bn     Next buffer
+
 * <Backspace>    关闭搜索高亮颜色
 
 * jk             esc in insert mode and command mode
@@ -90,9 +93,10 @@ Run ":PlugInstall" in your vim.
 ### coc-explorer 文件管理器
 
 ```
-* <F2>             显示文件窗口
-* <F3>             浮窗显示文件窗口
-* <F4>             taglist
+* <F2>             浮窗显示文件窗口
+* <leader><F2>     左侧显示文件窗口
+* <F3>             浮窗显示 tags 窗口
+* <leader><F3>     右侧显示 tags 窗口
 * k                上一个节点
 * j                下一个节点
 * h                收起
@@ -126,8 +130,13 @@ Run ":PlugInstall" in your vim.
 * <leader>k        显示参数文档
 * <leader>f        浮窗显示文件窗口
 
-* <F5>             打开 coclist dialogistic
+* <F4>             打开 coclist dialogistic
 * <leader>c        打开 coclist command
+
+* bt               Create/Delete bookmark
+* ba               Create bookmark with annotate
+* bj               Next bookmark
+* bk               Previous bookmark
 ```
 
 ### EasyMotion
