@@ -95,7 +95,7 @@ Run ":PlugInstall" in your vim.
 ```
 * <F2>             浮窗显示文件窗口
 * <leader><F2>     左侧显示文件窗口
-* <F3>             浮窗显示 tags 窗口
+* <F3>             浮窗显示当前 buffer 的 tags 窗口
 * <leader><F3>     右侧显示 tags 窗口
 * k                上一个节点
 * j                下一个节点

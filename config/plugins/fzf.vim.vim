@@ -404,6 +404,7 @@ if common#functions#HasPlug('vista.vim')
 else
     nnoremap <F3> :BTags<CR>
 endif
+nnoremap <M-t> :BTags<CR>
 nnoremap <M-T> :Tags<CR>
 nnoremap <M-s> :GrepWithWiki<CR>
 vnoremap <M-s> :GrepWithWikiVisual<CR>
