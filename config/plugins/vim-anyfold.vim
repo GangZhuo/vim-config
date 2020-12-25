@@ -3,14 +3,13 @@ set foldlevel=99                   " Open all folds
 let g:anyfold_fold_comments=1
 hi Folded term=underline
 
-" 大文件
 " activate anyfold by default
 augroup anyfold
     autocmd!
     autocmd Filetype * AnyFoldActivate
 augroup END
 
-" " disable anyfold for large files
+" disable anyfold for large files
 let g:LargeFile = 1000000 " file is large if size greater than 1MB
 function LargeFile()
     augroup anyfold
