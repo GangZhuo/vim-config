@@ -55,8 +55,8 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-vnoremap y "6y
-vnoremap p "6p
+"vnoremap y "6y
+"vnoremap p "6p
 
 " 复制到末尾
 "nnoremap Y y$
