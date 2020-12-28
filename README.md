@@ -142,8 +142,8 @@ Run ":PlugInstall" in your vim.
 ### EasyMotion
 
 ```
-* f               示意一个字符
-* F               示意单词
+* <leader>f       示意一个字符
+* <leader>F       示意单词
 * gl              示意行
 ```
 
