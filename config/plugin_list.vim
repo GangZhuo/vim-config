@@ -9,13 +9,7 @@
 Plug 'pseewald/vim-anyfold'
 
 " 快速移动
-Plug 'easymotion/vim-easymotion', {'on':
-   \ [
-   \ '<Plug>(easymotion-bd-f)', '<Plug>(easymotion-overwin-f)',
-   \ '<Plug>(easymotion-overwin-f2)', '<Plug>(easymotion-bd-jk)',
-   \ '<Plug>(easymotion-overwin-line)', '<Plug>(easymotion-bd-w)',
-   \ '<Plug>(easymotion-overwin-w)', '<Plug>(easymotion-s)',
-   \ ]}
+Plug 'easymotion/vim-easymotion'
 
 " 彩虹括号
 Plug 'luochen1990/rainbow'
@@ -34,7 +28,7 @@ Plug 'junegunn/fzf', { 'do': {-> fzf#install()} }
 Plug 'kshenoy/vim-signature'
 
 " Session
-"Plug 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify'
 
 " ctags
 Plug 'ludovicchabant/vim-gutentags'
