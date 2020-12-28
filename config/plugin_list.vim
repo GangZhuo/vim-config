@@ -34,7 +34,7 @@ Plug 'junegunn/fzf', { 'do': {-> fzf#install()} }
 Plug 'kshenoy/vim-signature'
 
 " Session
-Plug 'mhinz/vim-startify'
+"Plug 'mhinz/vim-startify'
 
 " ctags
 Plug 'ludovicchabant/vim-gutentags'
