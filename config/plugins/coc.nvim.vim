@@ -10,15 +10,16 @@ let g:coc_global_extensions = [
     \ 'coc-bookmark',
     \ 'coc-lists',
     \ 'coc-clangd',
+    \ 'coc-html',
+    \ 'coc-css',
+    \ 'coc-json',
+    \ 'coc-tsserver',
+    \ 'coc-sh',
+    \ 'coc-lua',
     \ ]
 
 
     "\ 'coc-xml',
-
-    "\ 'coc-html',
-    "\ 'coc-css',
-    "\ 'coc-json',
-    "\ 'coc-tsserver',
 
     "\ 'coc-vimlsp',
     "\ 'coc-calc',
@@ -26,7 +27,6 @@ let g:coc_global_extensions = [
     "\ 'coc-snippets',
     "\ 'coc-marketplace',
     "\ 'coc-yank',
-    "\ 'coc-sh',
     "\ 'coc-yaml',
     "\ 'coc-cmake',
     "\ 'coc-word',
