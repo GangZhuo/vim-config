@@ -132,11 +132,6 @@ Run ":PlugInstall" in your vim.
 
 * <F4>             打开 coclist dialogistic
 * <leader>c        打开 coclist command
-
-* bt               Create/Delete bookmark
-* ba               Create bookmark with annotate
-* bj               Next bookmark
-* bk               Previous bookmark
 ```
 
 ### EasyMotion
