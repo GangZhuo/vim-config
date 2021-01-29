@@ -38,6 +38,8 @@ Plug 'liuchengxu/vista.vim', {'on': ['Vista!!', 'Vista']}
 
 " 自动补全
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"let g:deoplete#enable_at_startup = 1
 
 " Theme
 Plug 'chriskempson/base16-vim'
