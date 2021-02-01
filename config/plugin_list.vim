@@ -27,6 +27,9 @@ Plug 'junegunn/fzf', { 'do': {-> fzf#install()} }
 " 显示标注
 Plug 'kshenoy/vim-signature'
 
+" BufferOnly
+Plug 'vim-scripts/BufOnly.vim'
+
 " Session
 Plug 'mhinz/vim-startify'
 
