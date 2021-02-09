@@ -10,7 +10,12 @@ let s:drive_frontslash = '\v^\a://'
 " The root of a relative path is empty.
 function! s:GetPathRootComponent(path) abort
   if !s:is_backslash_platform
-    return a:path[:0] ==# '/' ? '/' : a:path[:0] ==# '~' ? '~' : ''
+    return a:path[:0] ==# '/'   ? '/'   :
+         \ a:path[:1] ==# '~/'  ? '~/'  :
+         \ a:path[:1] ==# './'  ? './'  :
+         \ a:path[:2] ==# '../' ? '../' :
+         \ a:path[:0] ==# '$'   ? '$'   :
+         \ ''
   endif
   if a:path ==# '\'
     " Windows users can always use backslashes regardless of &shellslash.
@@ -47,7 +52,7 @@ function! s:GetSessionSavePath()
   return l:fullpath
 endfunction
 
-function! s:SaveSession(name) abort
+function! s:SaveSessionTo(name) abort
   if !isdirectory(g:session_dir)
     call mkdir(g:session_dir)
   endif
@@ -61,10 +66,18 @@ function! s:SaveSession(name) abort
   endif
 
   exec "mksession! " . l:path
-  echo "Save Session: " . l:path
+  echo "Session saved to: " . l:path
 endfunction
 
-function! s:RestoreSession(name) abort
+function! s:SaveSession(name) abort
+  if empty(a:name)
+    call s:SaveSessionTo('./Session.vim')
+  else
+    call s:SaveSessionTo(a:name)
+  endif
+endfunction
+
+function! s:RestoreSessionFrom(name) abort
   if empty(a:name)
     let l:path = s:GetSessionSavePath()
   elseif s:IsAbsolutePath(a:name)
@@ -75,6 +88,14 @@ function! s:RestoreSession(name) abort
 
   exec "source " . l:path
   echo "Restore Session: " . l:path
+endfunction
+
+function! s:RestoreSession(name) abort
+  if empty(a:name)
+    call s:RestoreSessionFrom('./Session.vim')
+  else
+    call s:RestoreSessionFrom(a:name)
+  endif
 endfunction
 
 "augroup vime_session_group
