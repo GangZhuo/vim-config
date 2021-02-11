@@ -247,7 +247,7 @@ nnoremap <silent><nowait> <leader>c  :<C-u>CocList commands<cr>
 
     " Use preset argument to open it
     " nmap <space>rd :CocCommand explorer --preset .vim<CR>
-    nmap <leader><F2> :CocCommand explorer --sources=buffer+,file+<CR>
+    nmap <leader><F2> :CocCommand explorer --sources=buffer+,file+ --width 32<CR>
     nmap <F2> :CocCommand explorer --sources=buffer+,file+ --preset floating<CR>
 
     augroup vime_coc_explorer_group
