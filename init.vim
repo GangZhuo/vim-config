@@ -33,3 +33,5 @@ for [plugName, _] in items(g:plugs)
     endif
 endfor
 
+LoadScript statusline.vim
+
