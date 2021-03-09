@@ -8,6 +8,7 @@ let g:coc_config_home = g:other_config_root_path
 let g:coc_global_extensions = [
     \ 'coc-explorer',
     \ 'coc-lists',
+    \ 'coc-yank',
     \ 'coc-clangd',
     \ 'coc-html',
     \ 'coc-css',
@@ -25,7 +26,6 @@ let g:coc_global_extensions = [
     "\ 'coc-stylelint',
     "\ 'coc-snippets',
     "\ 'coc-marketplace',
-    "\ 'coc-yank',
     "\ 'coc-yaml',
     "\ 'coc-cmake',
     "\ 'coc-word',

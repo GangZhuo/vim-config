@@ -41,6 +41,8 @@ Plug 'liuchengxu/vista.vim'
 
 " 自动补全
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
+
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "let g:deoplete#enable_at_startup = 1
 
