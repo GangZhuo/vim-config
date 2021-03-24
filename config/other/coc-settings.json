@@ -1,57 +1,58 @@
 {
-  "coc.preferences.extensionUpdateCheck": "daily",
+	"coc.preferences.extensionUpdateCheck": "daily",
 
-  "suggest.acceptSuggestionOnCommitCharacter": true,
-  "suggest.timeout": 5000,
-  "suggest.noselect": true,
-  "suggest.snippetIndicator": "  ❄",
-  "suggest.completionItemKindLabels": {
-    "class": "",
-    "color": "",
-    "constant": "",
-    "default": "",
-    "enum": "",
-    "enumMember": "",
-    "event": "鬒",
-    "field": "m",
-    "file": "",
-    "folder": "",
-    "function": "F",
-    "interface": "",
-    "keyword": "",
-    "method": "f",
-    "module": "",
-    "operator": "Ψ",
-    "property": "",
-    "reference": "r",
-    "snippet": "",
-    "struct": "פּ",
-    "text": "",
-    "typeParameter": "",
-    "unit": "",
-    "value": "",
-    "variable": ""
-  },
+	"suggest.acceptSuggestionOnCommitCharacter": true,
+	"suggest.timeout": 5000,
+	"suggest.noselect": true,
+	"suggest.snippetIndicator": "  ❄",
+	"suggest.completionItemKindLabels": {
+		"class": "",
+		"color": "",
+		"constant": "",
+		"default": "",
+		"enum": "",
+		"enumMember": "",
+		"event": "鬒",
+		"field": "m",
+		"file": "",
+		"folder": "",
+		"function": "F",
+		"interface": "",
+		"keyword": "",
+		"method": "f",
+		"module": "",
+		"operator": "Ψ",
+		"property": "",
+		"reference": "r",
+		"snippet": "",
+		"struct": "פּ",
+		"text": "",
+		"typeParameter": "",
+		"unit": "",
+		"value": "",
+		"variable": ""
+	},
 
-  "diagnostic.signOffset": 9999,
-  "diagnostic.errorSign": "■",
-  "diagnostic.warningSign": "▲",
-  "diagnostic.infoSign": "●",
-  "diagnostic.hintSign": "●",
-  "diagnostic.displayByAle": false,
-  "diagnostic.maxWindowHeight": 10,
+	"diagnostic.signOffset": 9999,
+	"diagnostic.errorSign": "■",
+	"diagnostic.warningSign": "▲",
+	"diagnostic.infoSign": "●",
+	"diagnostic.hintSign": "●",
+	"diagnostic.displayByAle": false,
+	"diagnostic.maxWindowHeight": 10,
 
-  "bookmark.sign": {
-    "type": "string",
-    "default": "🔖",
-    "description": "Bookmark icon for sign column"
-  },
-  "bookmark.signHl": {
-    "type": "string",
-    "default": "Tag",
-    "description": "Highlight group for sign"
-  },
+	"bookmark.sign": {
+		"type": "string",
+		"default": "🔖",
+		"description": "Bookmark icon for sign column"
+	},
+	"bookmark.signHl": {
+		"type": "string",
+		"default": "Tag",
+		"description": "Highlight group for sign"
+	},
 
-  "languageserver": {}
+	"languageserver": {
+	}
 }
 
