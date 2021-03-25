@@ -33,7 +33,6 @@
 		"variable": ""
 	},
 
-	"diagnostic.signOffset": 9999,
 	"diagnostic.errorSign": "■",
 	"diagnostic.warningSign": "▲",
 	"diagnostic.infoSign": "●",
@@ -41,16 +40,8 @@
 	"diagnostic.displayByAle": false,
 	"diagnostic.maxWindowHeight": 10,
 
-	"bookmark.sign": {
-		"type": "string",
-		"default": "🔖",
-		"description": "Bookmark icon for sign column"
-	},
-	"bookmark.signHl": {
-		"type": "string",
-		"default": "Tag",
-		"description": "Highlight group for sign"
-	},
+	"Lua.diagnostics.disable": ["lowercase-global","unused-local","unused-function"],
+	"Lua.diagnostics.globals": ["redis","KEYS","ARGV"],
 
 	"languageserver": {
 	}

@@ -1,6 +1,6 @@
 
 " Highlight comment in the '.json' file
-"Plug 'kevinoid/vim-jsonc'
+Plug 'kevinoid/vim-jsonc'
 
 " 重复上次的动作
 "Plug 'tpope/vim-repeat'
