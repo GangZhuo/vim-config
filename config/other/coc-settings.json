@@ -40,8 +40,8 @@
 	"diagnostic.displayByAle": false,
 	"diagnostic.maxWindowHeight": 10,
 
-	"Lua.diagnostics.disable": ["lowercase-global","unused-local","unused-function"],
-	"Lua.diagnostics.globals": ["redis","KEYS","ARGV"],
+	//"Lua.diagnostics.disable": ["lowercase-global","unused-local","unused-function"],
+	//"Lua.diagnostics.globals": ["redis","KEYS","ARGV"],
 
 	"languageserver": {
 	}
