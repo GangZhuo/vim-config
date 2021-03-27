@@ -8,23 +8,13 @@ Copy from https://github.com/fgheng/vime
 ```
 sudo apt-get install neovim nodejs npm default-jdk clangd bear bat ripgrep silversearcher-ag
 
-
-# Use below command to find java home path:
-
-sudo update-alternatives --config java
-
-# After get java home path, open the file /etc/environment,
-# and add below line:
-#
-#   JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
-#
-# Run below command to export the $JAVA_HOME
-
-source /etc/environment
-
-# Run below command to check JAVA_HOME
-
-echo $JAVA_HOME
+# Install Fonts
+sudo mkdir /usr/local/share/fonts/JetBrainsNerdFont
+sudo cd /usr/local/share/fonts/JetBrainsNerdFont
+sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
+sudo unzip JetBrainsMono.zip
+sudo rm JetBrainsMono.zip
+fc-cache -f -v
 
 git clone https://github.com/GangZhuo/vim-config.git ~/.config/nvim
 
