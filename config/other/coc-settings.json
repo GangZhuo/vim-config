@@ -40,6 +40,15 @@
 	"diagnostic.displayByAle": false,
 	"diagnostic.maxWindowHeight": 10,
 
+	"explorer.icon.customIcons": {
+		"icons": {
+			"h": {
+				"code": "",
+				"color": "#a074c4"
+			}
+		}
+	},
+
 	//"Lua.diagnostics.disable": ["lowercase-global","unused-local","unused-function"],
 	//"Lua.diagnostics.globals": ["redis","KEYS","ARGV"],
 
