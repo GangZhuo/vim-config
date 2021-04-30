@@ -87,8 +87,10 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 
 " diagnostic 跳转
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> <M-j> <Plug>(coc-diagnostic-next)
-nmap <silent> <M-k> <Plug>(coc-diagnostic-prev)
+"nmap <silent> <M-j> <Plug>(coc-diagnostic-next)
+"nmap <silent> <M-k> <Plug>(coc-diagnostic-prev)
+nmap <silent> gj <Plug>(coc-diagnostic-next)
+nmap <silent> gk <Plug>(coc-diagnostic-prev)
 
 " 跳转到定义
 nmap <silent> gd <Plug>(coc-definition)

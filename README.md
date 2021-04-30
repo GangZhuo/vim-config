@@ -109,8 +109,8 @@ Run ":PlugInstall" in your vim.
 * Shift + Tab      如果存在补全下拉框, 则选择上一个补全
 * Enter            选择第一个补全
 * <space>          选择第一个补全
-* ALT + j          移动到下一个问题点
-* ALT + k          移动到上一个问题点
+* gj               移动到下一个问题点
+* gk               移动到上一个问题点
 * gd               跳转到定义
 * gy               跳转到类型定义
 * gi               跳转到实现
