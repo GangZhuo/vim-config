@@ -44,7 +44,7 @@ function! s:uninstall_unused_coc_extensions() abort
         endif
     endfor
 endfunction
-autocmd User CocNvimInit call s:uninstall_unused_coc_extensions()
+"autocmd User CocNvimInit call s:uninstall_unused_coc_extensions()
 
 " 检查当前光标前面是不是空白字符
 function! s:check_back_space() abort
