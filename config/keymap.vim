@@ -78,3 +78,9 @@ inoremap jk <esc>
 " esc in command mode
 cnoremap jk <C-C>
 
+" Terminal mode has its own namespace for mappings, which is accessed with
+" the "t" prefix. It's possible to use terminal mappings to customize
+" interaction with the terminal. For example, here's how to map to exit
+" terminal mode:
+tnoremap <Esc> <C-\><C-n>
+
