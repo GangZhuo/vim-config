@@ -35,5 +35,6 @@ for [plugName, _] in items(g:plugs)
     endif
 endfor
 
+" 载入状态栏配置
 LoadScript statusline.vim
 
