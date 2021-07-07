@@ -6,7 +6,10 @@ Plug 'kevinoid/vim-jsonc'
 "Plug 'tpope/vim-repeat'
 
 " 功能很强的折叠插件, zc zo
-Plug 'pseewald/vim-anyfold'
+"Plug 'pseewald/vim-anyfold'
+
+" highlight, fold, and so on
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " 快速移动
 Plug 'easymotion/vim-easymotion'
@@ -48,4 +51,4 @@ Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 
 " Theme
 Plug 'chriskempson/base16-vim'
-
+Plug 'sainnhe/sonokai'
