@@ -1,23 +1,17 @@
 
 if has('termguicolors')
-	set termguicolors
+  set termguicolors
 endif
-let g:sonokai_style = 'default'
-let g:sonokai_enable_italic = 1
-let g:sonokai_disable_italic_comment = 0
+
+let g:sonokai_style = 'maia'
+"let g:sonokai_style = 'default'
+let g:sonokai_better_performance = 1
+"let g:sonokai_transparent_background = 1
 colorscheme sonokai
 
-" Access colors present in 256 colorspace
-"let base16colorspace=256
-"
 "if filereadable(expand("~/.vimrc_background"))
-"    source ~/.vimrc_background
+"	source ~/.vimrc_background
 "else
-"    set background=dark
-"    colorscheme base16-default-dark
-"    " colorscheme base16-railscasts
+"	colorscheme base16-default-dark
 "endif
-"
-"" 24 bit colour support!
-"set termguicolors
 
