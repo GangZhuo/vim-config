@@ -1,7 +1,7 @@
 {
 	"coc.preferences.extensionUpdateCheck": "daily",
-	"coc.preferences.colorSupport": false,
-	"coc.preferences.semanticTokensHighlights": false,
+	//"coc.preferences.colorSupport": false,
+	//"coc.preferences.semanticTokensHighlights": false,
 
 	"suggest.acceptSuggestionOnCommitCharacter": true,
 	"suggest.timeout": 5000,
