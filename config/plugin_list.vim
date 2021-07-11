@@ -1,6 +1,7 @@
 
 " highlight, fold, and so on
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'p00f/nvim-ts-rainbow'
 
 " 快速移动
 Plug 'easymotion/vim-easymotion'
