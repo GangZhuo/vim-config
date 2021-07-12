@@ -33,10 +33,6 @@ if not has_value(orgval, 'xml') then
 end
 EOF
 
-" set foldlevel=0                  " close all folds or
-set foldlevel=99                   " Open all folds
-set foldenable
-
 function! MyFoldText()
 	let startLineText = trim(getline(v:foldstart))
 	let endLineText = trim(getline(v:foldend))

@@ -42,6 +42,11 @@ set softtabstop=4
 set shiftwidth=4
 set smarttab
 set shiftround
+" close all folds or
+"set foldlevel=0
+" Open all folds
+set foldlevel=99
+set foldenable
 " 基于缩进的折叠
 set foldmethod=indent
 " 启动vim时，关闭折叠
