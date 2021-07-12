@@ -18,9 +18,6 @@ EOF
 set foldlevel=99                   " Open all folds
 set foldenable
 
-setlocal foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
-
 function! GetSpaces(foldLevel)
 	if &expandtab == 1
 		" Indenting with spaces
@@ -41,6 +38,14 @@ function! MyFoldText()
 	return str
 endfunction
 
-" Custom display for text when folding
-set foldtext=MyFoldText()
+function! AttachFold()
+	setlocal foldexpr=nvim_treesitter#foldexpr()
+	setlocal foldtext=MyFoldText()
+	setlocal foldmethod=expr
+endfunction
+
+augroup NvimTreesitterFold
+	autocmd!
+	autocmd FileType * call AttachFold()
+augroup END
 
