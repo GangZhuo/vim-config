@@ -26,9 +26,10 @@ set softtabstop=4                                           " 连续数量的空
 set shiftwidth=4
 set smarttab
 set shiftround
-" set foldmethod=indent                                     " 基于缩进的折叠
-" set foldmethod=syntax                                     " 基于语法的折叠
-" set nofoldenable                                          " 启动vim时，关闭折叠
+" 基于缩进的折叠
+set foldmethod=indent
+" 启动vim时，关闭折叠
+set foldenable
 set colorcolumn=80                                          " 设置超过 80 长度提示
 
 " Some cos servers have issues with backup files,

@@ -12,36 +12,49 @@ require'nvim-treesitter.configs'.setup({
 		max_file_lines = 1000,
 	},
 })
+
+local function has_value (tab, val)
+	for index, value in ipairs(tab) do
+		if value == val then
+			return true
+		end
+	end
+	return false
+end
+
+local html = require'nvim-treesitter.parsers'.get_parser_configs().html
+local orgval = html.used_by;
+if not has_value(orgval, 'xml') then
+	-- Hack: If no this line, the xml can not add to 'ft_to_parsername'
+	html.used_by = nil
+	html.used_by = "xml"
+	table.insert(orgval, "xml")
+	rawset(html, "used_by", orgval);
+end
 EOF
 
 " set foldlevel=0                  " close all folds or
 set foldlevel=99                   " Open all folds
 set foldenable
 
-function! GetSpaces(foldLevel)
-	if &expandtab == 1
-		" Indenting with spaces
-		let str = repeat(" ", a:foldLevel / (&shiftwidth + 1) - 1)
-		return str
-	elseif &expandtab == 0
-		" Indenting with tabs
-		return repeat(" ", indent(v:foldstart) - (indent(v:foldstart) / &shiftwidth))
-	endif
-endfunction
-
 function! MyFoldText()
-	let startLineText = getline(v:foldstart)
+	let startLineText = trim(getline(v:foldstart))
 	let endLineText = trim(getline(v:foldend))
-	let indentation = GetSpaces(foldlevel("."))
+	let indentation = repeat(" ", indent(v:foldstart))
 	let spaces = repeat(" ", 200)
 	let str = indentation . startLineText . "..." . endLineText . spaces
 	return str
 endfunction
 
 function! AttachFold()
-	setlocal foldexpr=nvim_treesitter#foldexpr()
-	setlocal foldtext=MyFoldText()
-	setlocal foldmethod=expr
+lua <<EOF
+local parser = require'nvim-treesitter.parsers'
+if parser.has_parser() then
+	vim.api.nvim_command('setlocal foldexpr=nvim_treesitter#foldexpr()')
+	vim.api.nvim_command('setlocal foldtext=MyFoldText()')
+	vim.api.nvim_command('setlocal foldmethod=expr')
+end
+EOF
 endfunction
 
 augroup NvimTreesitterFold
