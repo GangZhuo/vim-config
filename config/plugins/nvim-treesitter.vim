@@ -18,7 +18,7 @@ EOF
 set foldlevel=99                   " Open all folds
 set foldenable
 
-set foldmethod=expr
+setlocal foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 
 function! GetSpaces(foldLevel)
